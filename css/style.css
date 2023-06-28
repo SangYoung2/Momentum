@@ -1,7 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .hidden {
     display: none;
 }
 
-img {
+#momentum {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+#container {
     width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+#clock {
+    font-size: 5rem;
 }
