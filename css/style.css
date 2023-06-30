@@ -1,6 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
 }
 
 .hidden {
@@ -16,7 +21,7 @@
     background-position: center;
     color: white;
     position: relative;
-    text-align: center;
+    /* text-align: center; */
 }
 
 #container {
@@ -27,7 +32,7 @@
     top: 50%;
     /* left: 50%; */
     transform: translateY(-20%);
-
+    text-align: center;
 }
 
 #clock {
@@ -39,21 +44,58 @@
 }
 
 #todo-form > input {
-    width: 300px;
-    height: 60px;
+    width: 500px;
+    height: 40px;
     background: none;
     border: none;
     border-bottom: 2px solid white;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: white;
 }
 
 #todo-form > input::placeholder {
     color: inherit;
     text-align: center;
+    font-size: 1.25rem;
 }
 
 #todo-form > input:focus {
     outline: none;
+}
+
+#todo_list_container {
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#todo_list_container > p {
+    font-size: 1.25rem;
+    height: 30px;
+    line-height: 30px;
+}
+
+#todo-list {
+    margin-top: 10px;
+}
+
+#todo-list > li {
+    height: 30px;
+    line-height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#weather {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
