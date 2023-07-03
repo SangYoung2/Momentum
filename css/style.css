@@ -36,11 +36,14 @@ li {
 }
 
 #clock {
-    font-size: 5rem;
+    font-size: 9rem;
+    letter-spacing: -5px;
+    line-height: 7.5rem;
 }
 
 #greeting {
     font-size: 6rem;
+    font-weight: 500;
 }
 
 #quote {
