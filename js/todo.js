@@ -24,7 +24,7 @@ function paintToDo(newToDo){
     const span = document.createElement("span"); // span 태그를 생성
     span.innerText = newToDo.text;
     const button = document.createElement("button"); // button 태그를 생성
-    button.innerText = "X";
+    button.innerText = "×";
     li.appendChild(span); // li 태그 안에 span 태그를 자식으로 삽입
     li.appendChild(button); // li 태그 안에 button 태그를 자식으로 삽입
     button.addEventListener("click", deleteTodo)

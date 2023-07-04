@@ -77,12 +77,14 @@ li {
 
 #todo_list_container {
     width: 300px;
-    height: 300px;
-    padding: 10px;
+    height: 0px;
+    overflow: hidden;
+    /* padding: 10px; */
     position: absolute;
-    bottom: 20px;
+    bottom: 60px;
     right: 20px;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.7);
+    transition-duration: 1s;
 }
 
 #todo_list_container > p {
@@ -101,6 +103,35 @@ li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+#todo-list button {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#todo_btn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#todo_btn:hover {
+    opacity: 1;
+}
+
+#checkbox {
+    display: none;
+}
+
+#todo_btn:has(input:checked) #todo_list_container {
+    height: 300px;
 }
 
 #weather {
