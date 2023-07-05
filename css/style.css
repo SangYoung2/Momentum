@@ -14,24 +14,40 @@ li {
 
 #momentum {
     width: 100vw;
+    min-width: 1400px;
     height: 100vh;
+    min-height: 960px;
+    padding: 20px;
     overflow: hidden;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    color: white;
     position: relative;
-    /* text-align: center; */
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#logout-btn > span {
+    cursor: pointer;
+}
+
+#weather {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif
 }
 
 #container {
-    width: 100%;
-    height: 100%;
     padding: 10px;
-    position: absolute;
-    top: 50%;
-    /* left: 50%; */
-    transform: translateY(-20%);
     text-align: center;
 }
 
@@ -39,6 +55,43 @@ li {
     font-size: 9rem;
     letter-spacing: -5px;
     line-height: 7.5rem;
+}
+
+#login-form {
+    margin-top: 30px;
+}
+
+#login-form > input[type="text"] {
+    width: 400px;
+    height: 40px;
+    background: none;
+    border: none;
+    color: white;
+    border-bottom: 1px solid white;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+#login-form > input[type="text"]::placeholder {
+    color: inherit;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#login-form > input[type="submit"] {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+#login-form > input[type="text"]:focus::placeholder {
+    color: transparent;
+}
+
+#login-form > input[type="text"]:focus {
+    outline: none;
 }
 
 #greeting {
@@ -75,19 +128,25 @@ li {
     outline: none;
 }
 
-#todo_list_container {
+#todo-list-container {
     width: 300px;
     height: 0px;
     overflow: hidden;
-    /* padding: 10px; */
-    position: absolute;
-    bottom: 60px;
-    right: 20px;
     background-color: rgba(0,0,0,0.7);
+    transform: translateY(20px);
     transition-duration: 1s;
+    position: absolute;
+    right: 20px;
+    bottom: 80px;
+    opacity: 0;
+    z-index: 2;
 }
 
-#todo_list_container > p {
+#todo-list-wrap {
+    padding: 10px;
+}
+
+#todo-list-wrap > p {
     font-size: 1.25rem;
     height: 30px;
     line-height: 30px;
@@ -113,16 +172,14 @@ li {
     cursor: pointer;
 }
 
-#todo_btn {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
+#todo-btn {
+    text-align: right;
     font-size: 1.5rem;
     cursor: pointer;
     opacity: 0.7;
 }
 
-#todo_btn:hover {
+#todo-btn:hover {
     opacity: 1;
 }
 
@@ -130,14 +187,8 @@ li {
     display: none;
 }
 
-#todo_btn:has(input:checked) #todo_list_container {
+#todo-btn:has(input:checked) ~ #todo-list-container {
     height: 300px;
-}
-
-#weather {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 1.5rem;
-    font-weight: bold;
+    transform: translateY(0);
+    opacity: 1;
 }

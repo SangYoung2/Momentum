@@ -1,6 +1,10 @@
 const toDoForm = document.getElementById("todo-form");
-const toDoInput = document.querySelector("#todo-form input")
+const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
+const username = document.getElementById("greeting").innerText.split(',')[1];
+
+console.log(username);
+
 
 const TODOS_KEY = "todos"
 
@@ -37,7 +41,8 @@ function handleToDoSubmit(event){
     toDoInput.value = "";
     const newTodoObj = {
         text: newTodo,
-        id: Date.now()
+        id: Date.now(),
+        username : username
     };
     toDos.push(newTodoObj);
     paintToDo(newTodoObj);

@@ -15,6 +15,15 @@
 </head>
 <body>
     <div id="momentum">
+        <header>
+            <div id="logout-btn">
+                <span class="hidden">Logout</span>
+            </div>
+            <div id="weather">
+                <span></span>
+                <span></span>
+            </div>
+        </header>
         <div id="container">
             <h2 id="clock">00:00:00</h2>
             <form id="login-form" class="hidden">
@@ -23,7 +32,7 @@
             </form>
             <h1 id="greeting" class="hidden"></h1>
             <form id="todo-form">
-                <input type="text" placeholder="Write a To Do and Press Enter">
+                <input class="hidden" type="text" placeholder="Write a To Do and Press Enter">
             </form>
             <div id="quote">
                 <span></span>
@@ -31,18 +40,16 @@
                 <span></span>
             </div>
         </div>
-        <div id="weather">
-            <span></span>
-            <span></span>
+        <div id="todo-btn">
+                <input type="checkbox" id="checkbox">
+                <label class="hidden" for="checkbox"><span>Todo</span></label>
         </div>
-        <div id="todo_list_container">
-            <p>Todo-List</p>
-            <hr>
-            <ul id="todo-list"></ul>
-        </div>
-        <div id="todo_btn">
-            <input type="checkbox" id="checkbox">
-            <label for="checkbox"><span>Todo</span></label>
+        <div id="todo-list-container">
+            <div id="todo-list-wrap">
+                <p>Todo-List</p>
+                <hr>
+                <ul id="todo-list"></ul>
+            </div>
         </div>
     </div>
 </body>
