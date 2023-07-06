@@ -99,10 +99,6 @@ header {
     font-weight: 500;
 }
 
-#quote {
-    margin-top: 10px;
-}
-
 #todo-form > input {
     width: 500px;
     height: 40px;
@@ -172,9 +168,17 @@ header {
     cursor: pointer;
 }
 
-#todo-btn {
+footer {
     text-align: right;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+}
+
+#quote {
+    text-align: center;
+}
+
+#todo-btn {
+    float: right;
     cursor: pointer;
     opacity: 0.7;
 }

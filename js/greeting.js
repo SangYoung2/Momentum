@@ -39,7 +39,7 @@ function paintGreetings(username){
         comments = "Good evening"
     }
 
-    greeting.innerText = `${comments}, ${username}`;
+    greeting.innerText = `${comments},${username}`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
     logout.classList.remove(HIDDEN_CLASSNAME);
     todoInput.classList.remove(HIDDEN_CLASSNAME);

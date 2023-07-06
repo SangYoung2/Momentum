@@ -9,6 +9,7 @@ console.log(username);
 const TODOS_KEY = "todos"
 
 let toDos = [];
+let nowUserTodo = [];
 
 function saveToDos(){
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
@@ -18,7 +19,7 @@ function saveToDos(){
 function deleteTodo(event){
     const li = event.target.parentElement;
     li.remove();
-    toDos = toDos.filter(toDo => toDo.id != parseInt(li.id))
+    toDos = toDos.filter(toDo => toDo.id != parseInt(li.id) && toDo.username != username)
     saveToDos()
 }
 
@@ -53,10 +54,11 @@ toDoForm.addEventListener("submit", handleToDoSubmit);
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
-
-
 if(savedToDos !== null){
     const parsedToDos = JSON.parse(savedToDos); // localStorage에 저장된 todos를 parse 시켜 자바스크립트에서 사용할 수 있는 object로 가져온다.
     toDos = parsedToDos;
-    parsedToDos.forEach(paintToDo);
+    console.log(toDos);
+    nowUserTodo = toDos.filter(toDo => toDo.username == username)
+    console.log(nowUserTodo);
+    nowUserTodo.forEach(paintToDo);
 }
